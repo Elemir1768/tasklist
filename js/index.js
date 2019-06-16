@@ -1,27 +1,15 @@
-console.log("index runed");
-var app = new Vue({
+require("bootstrap");
+import "../styles/index.scss";
+var Vue = require("vue/dist/vue.js");
+const maincontent = require("./components/main.vue").default;
+
+console.log("index runed3704");
+new Vue({
     el: "#app",
     data: {
         title: "Task List",
-        newTask: "",
-        items: [
-            {text: "First"},
-            {text: "Second"},
-            {text: "First"},
-            {text: "Second"}
-        ]
     },
-    methods: {
-        addItem: function () {
-            if (this.newTask !== "") {
-                this.items.push({
-                    text: this.newTask
-                });
-                this.newTask = "";
-            }
-        },
-        deleteItem: function(index) {
-            this.items.splice(index, 1);
-        }
+    components: {
+        maincontent: maincontent
     }
 });

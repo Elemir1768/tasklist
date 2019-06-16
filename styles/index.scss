@@ -1,0 +1,37 @@
+@import "~bootstrap/scss/bootstrap";
+@import "font-awesome/scss/fontawesome";
+@import "font-awesome/scss/solid";
+
+.btn-icon {
+  &:hover {
+    filter: brightness(0.7);
+  }
+}
+
+$text-muted: #bcc3ca;
+
+.text-muted {
+  color: $text-muted !important;
+}
+
+.draggable {
+  cursor: pointer;
+}
+
+.sortable-ghost {
+  background-color: #f9f9f9;
+}
+
+.sortable-chosen {
+  cursor: grabbing;
+}
+
+.flip-list-move {
+  transition: transform 0.5s;
+}
+.no-move {
+  transition: transform 0s;
+}
+
+
+
